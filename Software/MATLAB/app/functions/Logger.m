@@ -37,10 +37,6 @@ classdef Logger < handle
 
     % Copyright 2013 The MathWorks, Inc.
     %
-    % Auth/Revision:
-    %   MathWorks Consulting
-    %   $Author$
-    %   $Revision$  $Date$
     % ---------------------------------------------------------------------
 
     %% Public properties

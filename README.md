@@ -26,7 +26,7 @@ Provide suggestions for additional features or capabilities using the following 
 https://www.mathworks.com/products/reference-architectures/request-new-reference-architectures.html
 
 ## Support
-Email: `mwlab@mathworks.com`      
+Email: `mwlab@mathworks.com` or please log an issue.   
 
 
 [//]: #  (Copyright 2018 The MathWorks, Inc.)   
