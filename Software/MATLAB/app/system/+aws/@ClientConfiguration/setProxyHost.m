@@ -1,11 +1,12 @@
 function setProxyHost(obj, varargin)
-% SETPROXYHOST Sets the optional proxy host the client will connect through.
+% SETPROXYHOST Sets the optional proxy host the client will connect through
 % This is based on the setting in the MATLAB preferences panel. If the host
 % is not set there on Windows then the Windows system preferences will be
-% used. The proxy settings may vary based on the URL, thus a sample URL
-% should be provided if a specific URL is not known https://s3.amazonaws.com
-% is a useful default as it is likely to match the relevant proxy selection
-% rules.
+% used. Though it is not normally the case proxy settings may vary based on the
+% destination URL, if this is the case a URL should be provided for a specific
+% service. If a URL is not provided then https://s3.amazonaws.com is used as
+% a default and is likely to match the relevant proxy selection rules for AWS
+% traffic.
 %
 % Examples:
 %
@@ -16,13 +17,12 @@ function setProxyHost(obj, varargin)
 %   To have the proxy host automatically set based on the given URL:
 %       clientConfig.setProxyHost('autoURL','https://examplebucket.amazonaws.com');
 %
-%   To force the value of the proxy host TO a given value, e.g. myproxy.example.com:
+%   To force the value of the proxy host to a given value, e.g. myproxy.example.com:
 %       clientConfig.setProxyHost('proxyHost','myproxy.example.com');
 %   Note this does not overwrite the value set in the preferences panel.
 %
-% The s3 client initialization call will invoke setProxyHost();
-% to set preference based on the MATLAB preference if the proxyHost value is not
-% an empty value.
+% The client initialization call will invoke setProxyHost() to set a value based
+% on the MATLAB preference if the proxyHost value is not to an empty value.
 %
 
 % Copyright 2018 The MathWorks, Inc.
@@ -95,7 +95,7 @@ if ~isempty(host)
     % object property based on this to ensure direct correspondence
     obj.proxyHost = char(obj.Handle.getProxyHost());
 else
-    write(logObj,'verbose','Setting proxy host to an empty value');
+    % write(logObj,'verbose','Setting proxy host to an empty value');
     obj.proxyHost = '';
 end
 

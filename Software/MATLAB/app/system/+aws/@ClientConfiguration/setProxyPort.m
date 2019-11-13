@@ -1,11 +1,12 @@
 function setProxyPort(obj, varargin)
-% SETPROXYPORT Sets the optional proxy port the client will connect through.
+% SETPROXYPORT Sets the optional proxy port the client will connect through
 % This is normally based on the setting in the MATLAB preferences panel. If the
 % port is not set there on Windows then the Windows system preferences will be
-% used. The proxy settings may vary based on the URL, thus a sample URL
-% should be provided if a specific URL is not known https://s3.amazonaws.com
-% is a useful default as it is likely to match the relevant proxy selection
-% rules.
+% used. Though it is not normally the case proxy settings may vary based on the
+% destination URL, if this is the case a URL should be provided for a specific
+% service. If a URL is not provided then https://s3.amazonaws.com is used as
+% a default and is likely to match the relevant proxy selection rules for AWS
+% traffic.
 %
 % Examples:
 %
@@ -20,9 +21,8 @@ function setProxyPort(obj, varargin)
 %       clientConfig.setProxyPort(8080);
 %   Note this does not alter the value held set in the preferences panel.
 %
-% The s3 client initialization call will invoke setProxyPort();
-% to set preference based on the MATLAB preference if the proxyPort value is not
-% an empty value.
+% The client initialization call will invoke setProxyPort() to set a value based
+% on the MATLAB preference if the proxy port value is not an empty value.
 %
 
 % Copyright 2018 The MathWorks, Inc.
@@ -96,7 +96,7 @@ if ~isempty(port)
     % object property based on this to ensure direct correspondence
     obj.proxyPort = obj.Handle.getProxyPort();
 else
-    write(logObj,'verbose','Setting proxy port to an empty value');
+    % write(logObj,'verbose','Setting proxy port to an empty value');
     obj.proxyPort = [];
 end
 

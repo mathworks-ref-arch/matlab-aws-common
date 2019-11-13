@@ -1,19 +1,19 @@
 function setProxyUsername(obj, varargin)
-% SETPROXYUSERNAME Sets the optional proxy username.
-% This is based on the setting in the MATLAB preferences panel. If the
-% username is not set there on Windows then the Windows system preferences
-% will be used.
+% SETPROXYUSERNAME Sets the optional proxy username
+% This is based on the setting in the MATLAB preferences panel. If the username
+% is not set there on Windows then the Windows system preferences will be
+% used.
 %
 % Examples:
 %
 %    To set the username to a given value:
-%        clientConfig.setProxyUsername('JoeProxyUser');
+%        clientConfig.setProxyUsername('myProxyUsername');
 %    Note this does not overwrite the value set in the preferences panel.
 %
 %    To set the password automatically based on provided preferences:
 %        clientConfig.setProxyUsername();
 %
-% The s3 client initialization call will invoke setProxyUsername();
+% The client initialization call will invoke setProxyUsername();
 % to set preference based on the MATLAB preference if the proxyUsername value is
 % not an empty value.
 %
@@ -70,7 +70,7 @@ if ~isempty(username)
     % object property based on this to ensure direct correspondence
     obj.proxyUsername = char(obj.Handle.getProxyUsername());
 else
-    write(logObj,'verbose','Setting proxy username to an empty value');
+    % write(logObj,'verbose','Setting proxy username to an empty value');
     obj.proxyUsername = '';
 end
 

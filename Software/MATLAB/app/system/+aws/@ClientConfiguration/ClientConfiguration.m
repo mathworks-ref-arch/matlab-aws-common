@@ -6,7 +6,7 @@ classdef ClientConfiguration < aws.Object
     %  * Specify TCP socket buffer size hints
     % (Only limited proxy related methods are currently available)
     %
-    % Example:
+    % Example, in this case using an s3 client:
     %   s3 = aws.s3.Client();
     %   s3.clientConfiguration.setProxyHost('proxyHost','myproxy.example.com');
     %   s3.clientConfiguration.setProxyPort(8080);
@@ -27,8 +27,6 @@ classdef ClientConfiguration < aws.Object
         function obj = ClientConfiguration()
             import com.amazonaws.ClientConfiguration
 
-            logObj = Logger.getLogger();
-            write(logObj,'verbose','Creating Client Configuration');
             obj.Handle = com.amazonaws.ClientConfiguration();
             obj.proxyHost = '';
             obj.proxyPort = [];

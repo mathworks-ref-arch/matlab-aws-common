@@ -1,21 +1,20 @@
 function setProxyPassword(obj, varargin)
-% SETPROXYPASSWORD Sets the optional proxy password.
-% This is based on the setting in the MATLAB preferences panel. If the
-% preferences password is not set then on Windows the OS system preferences
-% will be used.
+% SETPROXYPASSWORD Sets the optional proxy password
+% This is based on the setting in the MATLAB preferences panel. If the password
+% is not set there on Windows then the Windows system preferences will be
+% used.
 %
 % Examples:
 %
 %   To set the password to a given value:
-%       clientConfig.setProxyPassword('2312sdsdes?$!%');
+%       clientConfig.setProxyPassword('myProxyPassword');
 %   Note this does not overwrite the value set in the preferences panel.
 %
 %   To set the password automatically based on provided preferences:
 %       clientConfig.setProxyPassword();
 %
-% The s3 client initialization call will invoke setProxyPassword();
-% to set preference based on the MATLAB preference if the proxyPassword value is
-% not an empty value.
+% The client initialization call will invoke setProxyPassword() to set
+% a value based on the MATLAB preference if the proxy password value is set.
 %
 % Note, it is bad practice to store credentials in code, ideally this value
 % should be read from a permission controlled file or other secure source
@@ -69,6 +68,6 @@ if ~isempty(password)
     % object property based on this to ensure direct correspondence
     obj.proxyPassword = char(obj.Handle.getProxyPassword());
 else
-    write(logObj,'verbose','Setting proxy password to an empty value');
+    % write(logObj,'verbose','Setting proxy password to an empty value');
     obj.proxyPassword = '';
 end %function
