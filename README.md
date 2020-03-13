@@ -19,7 +19,7 @@ To build a required JAR file:
 Please refer to the documents in the [Documentation](Documentation/README.md) folder to get started, however in general the documentation that ships with the interface to a specific service will be of most relevance and the best place to start.
 
 ## License
-Please see the [LICENSE.TXT](LICENSE.TXT) file in this GitHub repository.
+Please see the [LICENSE.md](LICENSE.md) file in this GitHub repository.
 
 ## Enhancement Request
 Provide suggestions for additional features or capabilities using the following link:   

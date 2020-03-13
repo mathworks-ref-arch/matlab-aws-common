@@ -1,3 +1,3 @@
-Branch/Tag:  HEAD -> master, tag: v0.2.3, tag: v0.2.2, develop
-Commit:  db2f7aad909990c8e9151c147beace720b3589b1
-Date:  2019-11-04 16:36:07 +0000
+Branch/Tag:  HEAD -> master, tag: v0.2.4, refs/merge-requests/5/head, refs/keep-around/e81e192cd462e4db9b65931d18312e420d978e90, develop
+Commit:  e81e192cd462e4db9b65931d18312e420d978e90
+Date:  2020-03-05 09:18:58 -0800

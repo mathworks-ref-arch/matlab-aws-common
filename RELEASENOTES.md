@@ -1,6 +1,10 @@
 # MATLAB Interface *for AWS* Common Package
 # Release Notes
 
+## Release 0.2.4 (5th Mar 2020)   
+* Updated security details   
+* Updated license   
+
 ## Release 0.2.3 (5th Nov 2019)
 * Added set and get for non proxy hosts to ClientConfiguration
 
