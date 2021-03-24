@@ -25,7 +25,7 @@ function setProxyHost(obj, varargin)
 % on the MATLAB preference if the proxyHost value is not to an empty value.
 %
 
-% Copyright 2018 The MathWorks, Inc.
+% Copyright 2018-2021 The MathWorks, Inc.
 
 % Imports
 import com.amazonaws.ClientConfiguration
@@ -41,7 +41,7 @@ p = inputParser;
 p.CaseSensitive = false;
 p.FunctionName = 'setProxyHost';
 validationFcn = @(x) validateattributes(x,{'char'},{'nonempty'});
-% if an autoURL is not specified assume AWS S3 as this is where we are most
+% if an autoURL is not specified assume Amazon S3 as this is where we are most
 % likely to connect to
 addParameter(p,'autoURL','https://s3.amazonaws.com',validationFcn);
 addParameter(p,'proxyHost','',validationFcn);
