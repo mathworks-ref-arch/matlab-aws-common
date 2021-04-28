@@ -4,7 +4,7 @@ function startup(varargin)
 % path. It will omit the SVN and other undesirable paths.  Modify undesired path
 % filter as desired.
 
-% Copyright 2018 The MathWorks, Inc.
+% Copyright 2018-2021 The MathWorks, Inc.
 
 if ~isdeployed()
 appStr = 'Adding Interface for AWS Common Paths';
@@ -55,7 +55,7 @@ end
 % Add post-setup operations here.
 disp('Running post setup operations');
 disp('Updating the Java classpath:');
-jarPath = fullfile(here,'lib','jar','target');
+jarPath = fullfile(here,'lib','jar');
 tmp = fullfile(jarPath,'aws-sdk-0.1.0.jar');
 jarFiles = dir(tmp);
 
