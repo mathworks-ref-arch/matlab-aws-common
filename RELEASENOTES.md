@@ -1,6 +1,9 @@
 # MATLAB Interface *for AWS* Common Package
 # Release Notes
 
+## Release 0.2.7 (22nd June 2021)
+* Minor startup.m changes
+
 ## Release 0.2.6 (22nd Mar 2021)
 * Enabled support for multiple AWS services using a common jar
 
