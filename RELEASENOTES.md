@@ -1,8 +1,13 @@
-# MATLAB Interface *for AWS* Common Package
-# Release Notes
+# MATLAB Interface *for AWS* Common Package - Release Notes
 
-## Release 0.2.7 (22nd June 2021)
-* Minor startup.m changes
+## Release 0.2.8 (3rd Mar 2022)
+* Updated pom.xml latest AWS 1.12.150 BOM
+
+## Release 0.2.7 (13th Dec 2021)
+
+* Updated pom.xml latest AWS 1.12.128 BOM to include log4j updates
+* Updated to JUNIT 4.3.2
+* Updated Maven shade plug version
 
 ## Release 0.2.6 (22nd Mar 2021)
 * Enabled support for multiple AWS services using a common jar
@@ -28,5 +33,4 @@
 ## Release 0.1.0 (Sep 2018)
 * Initial release as a standalone aws-common package
 
-
-[//]: #  (Copyright 2019 The MathWorks, Inc.)
+[//]: #  (Copyright 2019-2021 The MathWorks, Inc.)

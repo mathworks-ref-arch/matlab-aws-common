@@ -1,1 +1,7 @@
+*.json
+*.bak
 credentials.json
+unittests.json
+credentials.json_minio
+credentials.json_static
+credentials.json_sts
