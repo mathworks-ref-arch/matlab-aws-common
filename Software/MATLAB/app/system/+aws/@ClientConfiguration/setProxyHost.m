@@ -12,20 +12,20 @@ function setProxyHost(obj, varargin)
 %
 %   To have the proxy host automatically set based on the MATLAB preferences
 %   panel using the default URL of 'https://s3.amazonaws.com:'
-%       clientConfig.setProxyHost();
+%       clientConfiguration.setProxyHost();
 %
 %   To have the proxy host automatically set based on the given URL:
-%       clientConfig.setProxyHost('autoURL','https://examplebucket.amazonaws.com');
+%       clientConfiguration.setProxyHost('autoURL','https://examplebucket.amazonaws.com');
 %
 %   To force the value of the proxy host to a given value, e.g. myproxy.example.com:
-%       clientConfig.setProxyHost('proxyHost','myproxy.example.com');
+%       clientConfiguration.setProxyHost('proxyHost','myproxy.example.com');
 %   Note this does not overwrite the value set in the preferences panel.
 %
 % The client initialization call will invoke setProxyHost() to set a value based
-% on the MATLAB preference if the proxyHost value is not to an empty value.
+% on the MATLAB preference if the proxyHost value is not empty.
 %
 
-% Copyright 2018-2021 The MathWorks, Inc.
+% Copyright 2018-2023 The MathWorks, Inc.
 
 % Imports
 import com.amazonaws.ClientConfiguration

@@ -12,20 +12,20 @@ function setProxyPort(obj, varargin)
 %
 %   To have the port automatically set based on the default URL of
 %   https://s3.amazonaws.com:
-%       clientConfig.setProxyPort();
+%       clientConfiguration.setProxyPort();
 %
 %   To have the port automatically set based on the given URL:
-%       clientConfig.setProxyPort('https://examplebucket.amazonaws.com');
+%       clientConfiguration.setProxyPort('https://examplebucket.amazonaws.com');
 %
 %   To force the value of the port to a given value, e.g. 8080:
-%       clientConfig.setProxyPort(8080);
+%       clientConfiguration.setProxyPort(8080);
 %   Note this does not alter the value held set in the preferences panel.
 %
 % The client initialization call will invoke setProxyPort() to set a value based
 % on the MATLAB preference if the proxy port value is not an empty value.
 %
 
-% Copyright 2018 The MathWorks, Inc.
+% Copyright 2018-2023 The MathWorks, Inc.
 
 % Note: This is derived from matlab.net.http.internal.HTTPConnector code.
 

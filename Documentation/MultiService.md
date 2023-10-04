@@ -22,7 +22,7 @@ SQS, S3 and SSM packages. This is stored in `matlab-aws-common/Software/MATLAB/l
 Also provided is a startup script `matlab-aws-common/Software/MATLAB/startupAll.m`
 which configures paths for the aforementioned packages. This script is easily
 modified to include only the subset of packages required. If support for Amazon
-Athena alongside these packages please contact MathWorks.
+Athena alongside these packages is required please contact MathWorks.
 
 
 [//]: #  (Copyright 2021 The MathWorks, Inc.)
